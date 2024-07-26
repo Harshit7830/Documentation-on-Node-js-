@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-- Introduction 
+- What is nodeJs ?
 
 - Installation 
 
@@ -24,30 +24,37 @@
 - Package Management
 - Security
 - Deployment
-## Introduction 
-Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code outside of a web browser. It is designed to build scalable network applications and allows developers to use JavaScript to write server-side scripts.
+## What is nodeJs?
+- Node.Js is a JavaScript runtime built on Chrome’s V8 JavaScript engine.
+- Node.Js is designed to build scalable network applications.
+- Node.Js can be download from the official Node.js website.
+- Node.Js is a free and open-source server environment.
+- Node.Js allows us to run JavaScript on the server.
+- Node.Js can run on multiple operating systems.
 
-### Features
-- **Asynchronous and Event-Driven:**
- All APIs of Node.js are asynchronous, non-blocking, and designed to optimize throughput and scalability.
-
-- **Single-Threaded but Highly Scalable:**
-Uses a single-threaded model with event looping.
-
-- **Fast:**
-Built on Google Chrome's V8 JavaScript Engine.
-
-- **No Buffering:**
-Applications output data in chunks, making them very efficient.
+### Why we use nodeJs?
+- You can use JavaScript in the entire stack.
+- Many famous companies use Node.Js as their backend.
+- Node.Js comes with a lot of useful built-in modules.
+- Node.Js is fast.
 
 ## Installation
-### Linux
 
-For Debian-based distributions (e.g., Ubuntu):
+### Linux for v22.5.1(current)
+
 
 ```jsx
-sudo apt update
-sudo apt install nodejs npm
+# installs nvm (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# download and install Node.js (you may need to restart the terminal)
+nvm install 22
+
+# verifies the right Node.js version is in the environment
+node -v # should print `v22.5.1`
+
+# verifies the right npm version is in the environment
+npm -v # should print `10.8.2`
 ```
 For other distributions, refer to the Node.js installation guide.
 
