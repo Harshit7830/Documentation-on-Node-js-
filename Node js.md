@@ -7,23 +7,15 @@
 - What is nodeJs ?
 
 - Installation 
+-Simple program 
 
-- Creating a simple Application 
+- OS Modules
 
-- Core Modules
-
-- Modules and Dependencies
+  
 - Error Handling
-- Asynchronous Programming
-- Debugging
-- Testing
-- Building a REST API
-- Express Framework
-- Database Integration
+- File System
 
-- Package Management
-- Security
-- Deployment
+
 ## What is nodeJs?
 - Node.Js is a JavaScript runtime built on Chrome’s V8 JavaScript engine.
 - Node.Js is designed to build scalable network applications.
@@ -93,27 +85,81 @@ npm init -y
   ```jsx
   node index
   ```
-  
-- Create a server.js file with the following content:
+## OS Modules
+- Frist we have to import
+  ```jsx
+  const os = require('node:os');
+  ```
+-then you can use os function 
 ```jsx
-const http = require('http');
 
-const hostname = '127.0.0.1';
-const port = 3000;
+const os = require('node:os');
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
-});
+console.log(os.freemen())
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+```
+Returns the amount of free system memory in bytes as an integer.
+
+-os.homedir()
+```jsx
+const os = require('node:os');
+
+console.log(os.homedir())
+```
+Returns the string path of the current user's home directory.
+
+- os.platform()
+  ```jsx
+   const os = require('node:os');
+
+   console.log(os.platform())
+   ```
+
+Returns a string identifying the operating system platform for which the Node.js binary was compiled. The value is set at compile time. Possible values are 'aix', 'darwin', 'freebsd','linux', 'openbsd', 'sunos', and 'win32'.
+
+-os.release()
+ ```jsx
+const os = require('node:os');
+
+   console.log(os.release())
+```
+Returns the operating system as a string.
+-os.uptime()
+```jsx
+const os = require('node:os');
+
+   console.log(os.uptime())
+```
+Returns the system uptime in number of seconds.
+
+## Error Handling
+-Proper error handling is crucial in Node.js applications.
+
+-Example:
+```jsx
+try {
+  // Code that may throw an error
+} catch (error) {
+  console.error(error);
+}
+```
+-Handling asynchronous errors:
+```jsx
+fs.readFile('file.txt', (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(data);
 });
 ```
-- Run the server
+## File System
+- The fs module provides an API for interacting with the file system.
+
 ```jsx
-node server.js
+const fs = require('fs');
+fs.readFile('example.txt', 'utf8', (err, data) => {
+  console.log(data);
+});
 ```
-- Open a browser and navigate to http://127.0.0.1:3000/ to see the "Hello World" message.
 
