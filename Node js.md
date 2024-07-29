@@ -148,8 +148,21 @@ try {
   console.error(error);
 }
 ```
+-Example 2
+```jsx
+const os = require('os');
+
+try {
+  // Attempt to get the free memory
+  console.log(os.freemem());
+} catch (error) {
+  // Log any errors that occur
+  console.error('An error occurred:', error);
+}
+```
 -Handling asynchronous errors:
 ```jsx
+const fs = require('fs')
 fs.readFile('file.txt', (err, data) => {
   if (err) {
     console.error(err);
