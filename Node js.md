@@ -64,7 +64,7 @@ For other distributions, refer to the Node.js installation guide.
   $ sudo apt update
 ```
 ## Vs code install
-<img src="" width="100%">
+
 
 
 ### Creating a Simple Application
