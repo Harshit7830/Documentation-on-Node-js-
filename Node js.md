@@ -85,6 +85,11 @@ npm init -y
   ```jsx
   node index
   ```
+
+  -Run the command to install Express:
+  ```jsx
+  npm install express --save
+   ```
 ## OS Modules
 - Frist we have to import
   ```jsx
@@ -95,7 +100,7 @@ npm init -y
 
 const os = require('node:os');
 
-console.log(os.freemen())
+console.log(os.freemem())
 
 ```
 Returns the amount of free system memory in bytes as an integer.
